@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main id="app" class="popup" aria-label="Password Generator">
+      <h1 class="popup-title" data-i18n="heading">Password Generator</h1>
+
+      <section id="passwordRow" class="password-row" aria-label="Generated password">
+        <input
+          id="password"
+          class="password-input"
+          type="text"
+          autocomplete="off"
+          spellcheck="false"
+          aria-label="Password"
+        />
+        <button
+          id="regenerate"
+          class="icon-button"
+          type="button"
+          aria-label="Regenerate password"
+          title="Regenerate password"
+        >
+          <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+            <path d="M18.7 9.2A7.2 7.2 0 1 0 19.1 15"></path>
+            <path d="M18.7 9.2l-0.3-4.4"></path>
+            <path d="M18.7 9.2l-4.3 0.6"></path>
+          </svg>
+        </button>
+        <button id="copy" class="icon-button" type="button" aria-label="Copy password" title="Copy password">
+          <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+            <rect x="9" y="9" width="11" height="11" rx="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+        </button>
+      </section>
+
+      <section id="options" class="options" aria-label="Password options">
+        <label class="check-option">
+          <input id="letters" type="checkbox" />
+          <span data-i18n="letters">Letters</span>
+        </label>
+        <label class="check-option">
+          <input id="numbers" type="checkbox" />
+          <span data-i18n="numbers">Numbers</span>
+        </label>
+        <label class="check-option">
+          <input id="symbols" type="checkbox" />
+          <span data-i18n="symbols">Symbols</span>
+        </label>
+        <label class="check-option">
+          <input id="extendedSymbols" type="checkbox" />
+          <span data-i18n="extendedSymbols">Complex Symbols</span>
+        </label>
+      </section>
+
+      <section id="lengthRow" class="length-row" aria-label="Password length">
+        <span class="length-label" data-i18n="length">Length</span>
+        <input id="length" class="length-slider" type="range" min="6" max="64" step="1" />
+        <output id="lengthValue" class="length-value" for="length">16</output>
+      </section>
+
+      <p class="site-link">
+        <a href="https://www.alvinliu.com" target="_blank" rel="noopener noreferrer">www.alvinliu.com</a>
+      </p>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

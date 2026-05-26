@@ -1,0 +1,8 @@
+{
+  "extName": {
+    "message": "Password Generator"
+  },
+  "extDescription": {
+    "message": "Generate and copy secure random passwords from a compact popup."
+  }
+}

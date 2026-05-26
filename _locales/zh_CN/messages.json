@@ -1,0 +1,8 @@
+{
+  "extName": {
+    "message": "密码生成器"
+  },
+  "extDescription": {
+    "message": "在简洁弹窗中生成并复制安全随机密码。"
+  }
+}
